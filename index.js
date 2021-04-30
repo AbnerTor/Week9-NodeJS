@@ -3,6 +3,7 @@ const inquire = require('inquirer')
 const fs = require('fs');
 const { type } = require('os');
 const Choices = require('inquirer/lib/objects/choices');
+const { prompt } = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
     'What is the name of your project?',
@@ -65,25 +66,27 @@ function promptUser() {
         name: 'license',
         message: 'What kind of license should your project have?',
         choices: [
-            'MIT', 'Mozilla Public License 2.0', 'Do What The F*ck You Want To Public License', 'GNU General Public License c3.0'
+            'MIT License', 'GNU General Public License v3.0', 'Microsoft Public License', 'ISC License', 'None', 
         ]
     },
 
-    {
-        type: 'input',
-        name: 'misc',
-        message: ''
-    },
-])
 
+])
+}
+
+function makeREADME(responses) {
+    const {creatorName, email, ghUserName, description, usage, contributions, license} = responses;
+
+    return ``
+}
+
+promptUser();
 
 
 // // TODO: Create a function to write README file
+
 // function writeToFile(fileName, data) {
 
-// }.then((responses) => {
-//     console.log(responses)
-// });
 
 // // TODO: Create a function to initialize app
 // function init() { }
@@ -92,4 +95,4 @@ function promptUser() {
 // init();
 
 
-// needs description, table of contents, installation, usage, license, contributing, tests and questions. 
+// needs description, table of contents, installation, usage, license, contributing, tests and questions
