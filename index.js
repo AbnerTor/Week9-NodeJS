@@ -77,72 +77,76 @@ function promptUser() {
         },
 
 
-    ])
+    ]).then((response) => {
+        let markDownData = makeREADME(response)
+        fs.writeFileSync("./generatedFile/readme.md", markDownData)
+    })
 }
+
+
 
 //needs description, table of contents, installation, usage, license, contributing, tests and questions
 
 function makeREADME(responses) {
-    const { projectName, creatorName, email, ghUserName, description, installations, usage, contributions, license } = responses;
+    const { projectName, creatorName, email, ghUsername, description, installation, usage, contributions, license } = responses;
 
     return `
     ## ${projectName}
     Made by ${creatorName}
     Contact me by email at: ${email}
-    Or check out my github: ${ghUserName}
+    Or check out my github: ${ghUsername}
 
 
 
-    ##Table of contents 
-    * Installation
-    * Description
-    * Usage
-    * Contributions
-    * Licenses 
+    ## Table of contents 
+
+     [Installation](##Installations)
+     Description
+     Usage
+     Contributions
+     Licenses 
     
 
 
-    ##Description
+    ## Description
 
     ${description}
 
 
 
-    ##Installations
+    ## Installations
 
     Down below are the dependencies that need to be installed for this readme: 
-        ${installations} 
+        ${installation} 
 
 
 
-    ##Usage 
+    ## Usage 
 
     ${usage}
 
 
 
-    ##Contributions
+    ## Contributions
     ${contributions}
 
 
-    ##License
+    ## License
 
     This project has a ${license}. 
 
 
 
-    This has been my Home Woek 9 assignement, feel free to contact me. 
+    This has been my Home Work 9 assignement, feel free to contact me. 
 
     `
 }
 
 
-// // TODO: Create a function to write README file
-
-// function writeToFile(fileName, data) {
+// TODO: Create a function to write README file
 
 
-// }
+
 
 
 // // TODO: Create a function to initialize app
@@ -151,8 +155,5 @@ function makeREADME(responses) {
 
 promptUser();
 
-
-// // Function call to initialize app
-// init();
 
 
