@@ -1,50 +1,57 @@
+## ReadME Generator
+Made by Abner Toribio
 
-    ## sdf
-    Made by sdf
-    Contact me by email at: sdf
-    Or check out my github: sdf
+Contact me by email at: abnertoribio@live.com
 
-
-
-    ## Table of contents 
-
-     [Installation](##Installations)
-     Description
-     Usage
-     Contributions
-     Licenses 
-    
-
-
-    ## Description
-
-    sdf
+Or check out my github: ABnerTor
 
 
 
-    ## Installations
+## Table of contents 
 
-    Down below are the dependencies that need to be installed for this readme: 
-        sd 
+[Description](#Description)
 
+[Installation](#Installations)
 
+[Usage](#Usage)
 
-    ## Usage 
+[Contributions](#Contributions)
 
-    sd
-
-
-
-    ## Contributions
-    s
-
-
-    ## License
-
-    This project has a MIT License. 
+[Licenses](#License) 
 
 
 
-    This has been my Home Work 9 assignement, feel free to contact me. 
+## Description
 
-    
+SO this is a program dedicated to helping you create a readme for any projects that you may be doing.
+
+
+## Installations
+
+Down below are the dependencies that need to be installed for this readme:
+
+run npm install 
+
+
+
+
+## Usage 
+
+Open ther terminal, type 'node index.js' and hit enter and the program will start running.
+
+
+
+## Contributions
+Not taking contributions at this moment.
+
+
+
+## License
+
+This project has a GNU General Public License v3.0. 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
+
+
+This has been my Home Work 9 assignement, feel free to contact me. 
+

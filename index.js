@@ -4,6 +4,7 @@ const fs = require('fs');
 const { type } = require('os');
 const Choices = require('inquirer/lib/objects/choices');
 const { prompt } = require('inquirer');
+// let generateMarkdown = require('generateMarkdown')
 // TODO: Create an array of questions for user input
 // const questions = [
 //     'What is the name of your project?',
@@ -72,7 +73,7 @@ function promptUser() {
             name: 'license',
             message: 'What kind of license should your project have?',
             choices: [
-                'MIT License', 'GNU General Public License v3.0', 'Microsoft Public License', 'ISC License', 'None',
+                'MIT License', 'GNU General Public License v3.0', 'ISC License', 'None',
             ]
         },
 
@@ -83,64 +84,87 @@ function promptUser() {
     })
 }
 
-
+function renderLicenseBadge(license) {
+    if (license === 'MIT License') {
+        return  `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    } else if (license === 'GNU General Public License v3.0') {
+        return  `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+    } else if (license === 'ISC License') {
+        return  `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+    }
+    else if (license === 'None') {
+        return  "";
+    }
+}
 
 //needs description, table of contents, installation, usage, license, contributing, tests and questions
 
 function makeREADME(responses) {
     const { projectName, creatorName, email, ghUsername, description, installation, usage, contributions, license } = responses;
 
-    return `
-    ## ${projectName}
-    Made by ${creatorName}
-    Contact me by email at: ${email}
-    Or check out my github: ${ghUsername}
+    return `## ${projectName}
+Made by ${creatorName}
+
+Contact me by email at: ${email}
+
+Or check out my github: ${ghUsername}
 
 
 
-    ## Table of contents 
+## Table of contents 
 
-     [Installation](##Installations)
-     Description
-     Usage
-     Contributions
-     Licenses 
-    
+[Description](#Description)
 
+[Installation](#Installations)
 
-    ## Description
+[Usage](#Usage)
 
-    ${description}
+[Contributions](#Contributions)
+
+[Licenses](#License) 
 
 
 
-    ## Installations
+## Description
 
-    Down below are the dependencies that need to be installed for this readme: 
-        ${installation} 
-
+${description}
 
 
-    ## Usage 
+## Installations
 
-    ${usage}
+Down below are the dependencies that need to be installed for this readme:
 
-
-
-    ## Contributions
-    ${contributions}
-
-
-    ## License
-
-    This project has a ${license}. 
+${installation} 
 
 
 
-    This has been my Home Work 9 assignement, feel free to contact me. 
 
-    `
+## Usage 
+
+${usage}
+
+
+
+## Contributions
+${contributions}
+
+
+
+## License
+
+This project has a ${license}. 
+${renderLicenseBadge(license)}
+
+
+
+This has been my Home Work 9 assignement, feel free to contact me. 
+
+`
 }
+
+
+promptUser();
+
 
 
 // TODO: Create a function to write README file
@@ -151,9 +175,3 @@ function makeREADME(responses) {
 
 // // TODO: Create a function to initialize app
 // function init() { }
-
-
-promptUser();
-
-
-
