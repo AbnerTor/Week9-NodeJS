@@ -1,9 +1,11 @@
-## ReadME Generator
+## ReadMe Generator
 Made by Abner Toribio
 
-Contact me by email at: abnertoribio@live.com
 
-Or check out my github: ABnerTor
+## License
+
+This project covered under a GNU General Public License v3.0. 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 
 
@@ -11,7 +13,7 @@ Or check out my github: ABnerTor
 
 [Description](#Description)
 
-[Installation](#Installations)
+[Tests](#Tests)
 
 [Usage](#Usage)
 
@@ -23,35 +25,29 @@ Or check out my github: ABnerTor
 
 ## Description
 
-SO this is a program dedicated to helping you create a readme for any projects that you may be doing.
+This program creates a readme file after answering a  set of prompts
 
 
-## Installations
+## Tests
 
-Down below are the dependencies that need to be installed for this readme:
-
-run npm install 
+THhe following instructions are how to run tests on this program: Open the terminal and run 'npm install' then run 'node index.js' and everything should work. 
 
 
 
 
 ## Usage 
 
-Open ther terminal, type 'node index.js' and hit enter and the program will start running.
+The purpose of this program is to create readme files for projects.
 
 
 
 ## Contributions
-Not taking contributions at this moment.
+Not taking contributions at this time.
 
 
 
-## License
 
-This project has a GNU General Public License v3.0. 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+## Questions
 
-
-
-This has been my Home Work 9 assignement, feel free to contact me. 
+If you have any questions or concerns, feel free to take a look at my Github: [AbnerTor](https//github.com/AbnerTor) or contact me by email at: abnertoribio@live.com
 

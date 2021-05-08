@@ -53,13 +53,13 @@ function promptUser() {
         {
             type: 'input',
             name: 'installation',
-            message: 'How do you install this program?'
+            message: 'Instructions for how to run tests'
         },
 
         {
             type: 'input',
             name: 'usage',
-            message: 'Instructions for how to use?'
+            message: 'What is the intended use of this program?'
         },
 
         {
@@ -105,9 +105,11 @@ function makeREADME(responses) {
     return `## ${projectName}
 Made by ${creatorName}
 
-Contact me by email at: ${email}
 
-Or check out my github: ${ghUsername}
+## License
+
+This project covered under a ${license}. 
+${renderLicenseBadge(license)}
 
 
 
@@ -115,7 +117,7 @@ Or check out my github: ${ghUsername}
 
 [Description](#Description)
 
-[Installation](#Installations)
+[Tests](#Tests)
 
 [Usage](#Usage)
 
@@ -130,11 +132,9 @@ Or check out my github: ${ghUsername}
 ${description}
 
 
-## Installations
+## Tests
 
-Down below are the dependencies that need to be installed for this readme:
-
-${installation} 
+THhe following instructions are how to run tests on this program: ${installation} 
 
 
 
@@ -150,14 +150,10 @@ ${contributions}
 
 
 
-## License
 
-This project has a ${license}. 
-${renderLicenseBadge(license)}
+## Questions
 
-
-
-This has been my Home Work 9 assignement, feel free to contact me. 
+If you have any questions or concerns, feel free to take a look at my Github: [${ghUsername}](https//github.com/${ghUsername}) or contact me by email at: ${email}
 
 `
 }
@@ -165,7 +161,7 @@ This has been my Home Work 9 assignement, feel free to contact me.
 
 promptUser();
 
-
+// I will get the installations link working :) 
 
 // TODO: Create a function to write README file
 
